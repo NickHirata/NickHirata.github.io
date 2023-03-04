@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Nick's Playlist </title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+
+        <style type="text/css">
+           
+             #inicio{
+                width:100%;
+                background:#1e32646e;
+                height:90px;
+                background-image: linear-gradient(to bottom, #1e32646e, #ffffff);
+                position: fixed;
+                
+            }
+            .img{
+               
+                display: block;
+                margin: 0 auto;
+            }
+
+            #meio{
+                width:100%;
+                background:#ffffff2f;
+                padding-top: 95px;
+                height:350px;
+            }
+            .titulo{
+                font-family: "Monotype Corsiva", cursive, sans-serif;
+                font-size: 36px;
+                text-shadow: -1.5px -1.5px 0px #f871a9;
+                width: auto;
+                height: auto;
+                float:left;
+                text-align: center;
+            }
+            .imag{
+                
+                width: auto;
+                height: auto;
+                float:center;
+                margin-left: 0%;
+                padding-top: 60px;
+            }
+            .lista{
+                margin-left: 300px;
+                margin-top: -260px;
+                width: 1000px;
+                height: 340px;
+                border: none;
+                float: right
+            }
+
+
+            #final{
+                width:100%;
+                background:#1e32646e;
+                height:500px;
+                padding: 15px;
+                background-image: linear-gradient(to bottom, #ffffff, #1e32646e);
+            }
+
+            #comentarios{
+                float:right,top;
+                background:#1e32646e;
+            }
+            form{
+                float:right;
+                padding-top: 30px;
+                padding-right: 600px;
+            
+            }
+            textarea{
+                resize: none;
+            }
+
+        </style>
+    </head>
+
+    <body>
+            
+        <div id="inicio" >
+            <img class="img" src="logotipo.png"
+            width="140px" height="70px">
+
+
+        </div>
+
+
+
+        <div id="meio">
+            <div class="titulo">Top melhores músicas</div>
+            <div class="imag">
+                <img  src="msc.jpg" width="350px" height="200px">
+           </div>  
+           <iframe class="lista" src="msc.html"></iframe>
+
+        </div>
+
+
+
+
+        <div id="final">
+            <iframe width="560" height="315" src="logotipo.png" name="iniciar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <form>
+                <h2>Faça seu comentário<br><br></h2>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"><br><br>
+                
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario"></textarea><br><br>
+            
+                <button type="submit">Enviar</button>
+            </form>
+              
+            <div id="comentarios">
+                <h2>Comentários</h2>
+            </div>
+                
+                <script>
+                    const form = document.querySelector('form');
+                    const comentariosDiv = document.querySelector('#comentarios');
+                
+                    form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                
+                    const nomeInput = document.querySelector('#nome');
+                    const comentarioInput = document.querySelector('#comentario');
+                
+                    const nome = nomeInput.value;
+                    const comentario = comentarioInput.value;
+                
+                    const comentarioElement = document.createElement('p');
+                    comentarioElement.innerHTML = `<strong>${nome}:</strong> ${comentario}`;
+                
+                    comentariosDiv.appendChild(comentarioElement);
+                
+                    nomeInput.value = '';
+                    comentarioInput.value = '';
+                    });
+                </script>
+        </div>
+    </body>
+
+</html>
