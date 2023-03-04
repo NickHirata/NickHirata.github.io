@@ -1,4 +1,4 @@
-# Para acessar clique aqui: https://nickhirata.github.io/index.html 
+# Para acessar o site, por favor, clique no seguinte link: https://nickhirata.github.io/index.html
 <blockquote>
   <p><strong>Aviso:</strong> A visualização correta deste conteúdo pode ser afetada ao acessar de dispositivos móveis.</p>
 </blockquote>
